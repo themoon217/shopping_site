@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+h1 {
+	font-size: 40px;
+	color: #ff0000;
+}
+h2 {
+	color: #ff0000;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    color: #fff;
+    background: url(../img/mainvisual-pc\ 1.jpg)no-repeat center center fixed;
+    background-size: cover;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+.logo img {
+    width: 100px;
+    height: auto;   
+}
+.logo:hover {
+    opacity: 1;
+}
+.logo2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo2 img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.check {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.check img {
+    width: 150%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+.big-text {
+    font-size: 72px;
+    font-weight: 900;
+    padding: 30px;
+}
+.large-text {
+    font-size: 39px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px 20px;
+}
+.medium-text {
+    font-size: 30px;
+    font-weight: 900;
+}
+.logout-text {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.medium-text2 {
+    color: #ff0000;
+    font-size: 30px;
+    font-weight: 900;
+}
+.medium-text3 {
+    color: #ff0000;
+    font-size: 22px;
+}
+.small-text {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.usual-text {
+    font-size: 15px;
+    font-weight: 500;
+}
+.Light-grey-square {
+    margin-top: 120px;
+}
+.grey-square {
+    margin-top: 80px;
+}
+.login-signup-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+.login-signup-btn button {
+    width: 250px;
+    max-width: 100%;
+    font-size: 30px;
+}
+.login-signup-btn button a {
+	text-decoration: none;
+	color: #444444;
+}
+.login-signup-btn2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;margin-top: 120px;
+}
+.login-signup-btn2 button {
+    width: 350px;
+    max-width: 100%;
+    font-size: 30px;
+}
+.gold-btn {
+    background-color: #B88E2F;
+    /*background-color: #b09d72;*/
+    color: #FFF;
+    font-weight: 900;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.gold-btn:hover {
+    background-color:rgba(255, 215, 0, 0.8);
+    /*background-color:rgb(126, 95, 16);*/
+}
+.gold-btn2 {
+    background-color: #B88E2F;
+    color: #FFF;
+    font-weight: 900;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 60px;
+    transition: background-color 0.3s ease;
+}
+.gold-btn2:hover {
+    background-color:rgba(255, 215, 0, 0.8);
+}
+.gray-btn {
+    background-color: #444444;
+    color: #FFF;
+    font-weight: 900;
+    border: 2px solid #B88E2F;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.gray-btn:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+}
+.gray-btn2 {
+    background-color: #444444;
+    color: #FFF;
+    font-weight: 900;
+    border: 2px solid #B88E2F;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 60px;
+    transition: background-color 0.3s ease;
+}
+.gray-btn2:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+}
+.back-button {
+    background-color: #444444;
+    color: #FFF;
+    font-weight: 900;
+    border: 2px solid #B88E2F;
+    padding: 20px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    max-width: 100%;
+    font-size: 20px;
+}
+.back-button:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+}
+form {
+    padding: 10px 30px 20px ;
+}
+.registerInput {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 240px;
+    height: 35px; 
+    padding: 10px;
+    font-size: 10px; 
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+main {
+	text-align: center;
+}

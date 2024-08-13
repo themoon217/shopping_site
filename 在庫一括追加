@@ -1,0 +1,5 @@
+INSERT INTO `stocks`(`itemID`, `colorID`, `sizeID`, `stock`)
+SELECT i.id AS itemID, ic.colorID AS colorID, isi.sizeID AS sizeID, 50 AS stock
+FROM items AS i
+JOIN `items_colors` AS ic ON i.id = ic.itemID
+JOIN `items_sizes` AS isi ON i.id = isi.itemID

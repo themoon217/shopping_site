@@ -1,0 +1,442 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding-top: 60px;
+	background-color: #f3f3f3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 18px;
+}
+
+main{
+    max-width: 1100px;
+    margin: 90px 100px;
+    display: block;
+    height: 65vh;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333333
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 768px){
+    main {
+        padding: 40px 15px;
+        margin-top: 60px;
+    }
+}
+
+/* ヘッダーの設定です */
+header {
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background-color: #0078d7;
+    color: #ffffff;
+    padding: 20px 30px 20px 60px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    height: 10vh;
+    width: auto;
+}
+
+nav {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #d4d4d4;
+}
+
+.material-symbols-outlined {
+    margin-right: 8px;
+    color: #fff;
+}
+
+.rsphidden {
+    display: inline;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .rsphidden {
+        display: none;
+    }
+
+    header {
+        padding: 20px 20px;
+    }
+
+    .logo {
+        height: 7vh;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+/* 管理画面トップページの設定です */
+.admin-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 73vh; 
+    text-align: center;
+}
+
+.admin-welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-welcome p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .admin-welcome h1 {
+        font-size: 2rem;
+    }
+
+    .admin-welcome p {
+        font-size: 1rem;
+    }
+}
+
+/* 色表示の設定です*/
+.color {
+    text-align: center;
+    margin-right: 3px;
+}
+
+.colorList {
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.pallet {
+    border-radius: 50%;
+    background-color: white;
+    height: 3.2vw;
+    width: 3.2vh;
+    max-width: 20px;
+    max-height: 20px;
+    border: 1px solid #929292;
+}
+
+/* 商品追加ページの設定です */
+.form-container {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 4px; 
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005a9e;
+}
+
+.custom-file-upload {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 110px;
+}
+
+.custom-file-upload:hover {
+    background-color: #005a9e;
+}
+
+.category input[type="radio"] {
+    accent-color: #007bff; 
+    margin-right: 8px;  
+}
+
+.category label {
+    cursor: pointer;  
+    font-size: 16px; 
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;  
+}
+
+.category {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 8px;  
+}
+
+input[type="radio"] {
+    margin-right: 8px;  
+}
+
+@media (max-width: 768px) {
+    .category {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* 追加後のメッセージページの設定です */
+.result-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.success-message {
+    color: #28a745; /* 成功メッセージ用の色 */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #dc3545; /* エラーメッセージ用の色 */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+/* 在庫確認ページの設定です */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table *{
+    padding: 1px;
+    color: #000;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse; /* 枠線を重ねる */
+    width: 100%; /* テーブル全体の幅を指定 */
+}
+
+td, th {
+	margin: 1px;
+    padding: 2px; /* セル内の余白を調整 */
+    text-align: center; /* テキストを中央揃え */
+    vertical-align: middle; /* セル内の要素を垂直方向に中央揃え */
+    border: 1px solid #000; /* 枠線のスタイルを指定 */
+}
+
+table tr td img {
+	 width: 40%; /* コンテナの幅に合わせる */
+	 height: 40%; /* コンテナの高さに合わせる */
+	object-fit: cover; /* 画像をコンテナ内に埋め込み、アスペクト比を維持しトリミングする */
+}
+
+table tr:nth-child(n + 2) td:nth-of-type(n+4):nth-of-type(-n+7){
+    text-align: right;
+    padding: 8px;
+}
+
+.right {
+    right: 0%;
+}
+
+.black-icon {
+    color: #000;
+}
+
+.product-image {
+    max-height: 100px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.color-indicator {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #929292;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.form-group input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #005a9e;
+}
+
+.product-form-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.product-image {
+    max-height: 500px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.color-indicator {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #929292;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.color-resize {
+    height: 50px;
+    width: 50px;
+}
+
+/* おすすめ商品追加・削除ページの設定です */
+.form-section {
+    margin-bottom: 20px;
+}
+
+.admin-update {
+    padding: 20px;
+}
+
+
+/* おすすめ商品追加後ページの設定です */
+.result-message {
+    text-align: center;
+    margin: 20px;
+}
+
+.result-message p {
+    font-size: 18px; 
+    color: #333;
+}

@@ -1,0 +1,1390 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+/* 全体の設定です */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+html,body {
+    color: #fff;
+    background: url(../img/mainvisual-pc\ 1.jpg)no-repeat center center fixed;
+    background-size: cover;
+    margin: 0px; 
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 85px 80px 0;
+    min-height: calc(100vh - 20px);
+    padding: 0 6vw; 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: rgba(255, 215, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+@media(max-width: 767px) {
+    main {
+        margin: 85px 15px;
+    }
+
+    .bord {
+        display: block !important;
+    }
+}
+
+/* ヘッダーの設定です */
+header {
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background: rgb(28, 28, 28);
+    padding: 20px 30px 20px 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    height: 10vh;
+    width: auto;
+}
+
+nav {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    color: #fff;
+}
+
+nav a:hover {
+    color: rgba(255, 215, 0, 0.8);
+}
+
+.material-symbols-outlined {
+    margin-right: 8px; 
+}
+
+/* cSpell:ignore rsphidden */
+.rsphidden {
+    display: inline;
+}
+
+@media (max-width: 767px) {
+    .rsphidden {
+        display: none;
+    }
+
+    header {
+        padding: 20px 20px;
+    }
+
+    .logo {
+        height: 7vh;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+/* フッターの設定です */
+footer {
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+    text-align: center;
+    padding: 10px 0; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    font-family: Arial, sans-serif; 
+}
+
+footer p {
+    color: #ccc; 
+    font-size: 12px; 
+}
+
+footer a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(255, 215, 0, 0.8);
+}
+
+/* カラーパレットの設定です */
+.colorList {
+    display: flex;
+    gap: 5px;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.pallet {
+    border-radius: 50%;
+    height: 3.6vw;
+    width: 3.6vw;
+    margin: 0 7px;
+    max-width: 25px;
+    max-height: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.pallet::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white; 
+    z-index: -1; 
+}
+
+.pallet::after {
+    content: '';
+    position: absolute;
+    top: -4px; 
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 2px solid white; 
+}
+
+.color-box {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sub-color-box {
+    padding: 10px;
+}
+
+/* インデックスの設定です */
+.index-main {
+    margin: 85px 80px 0;
+    min-height: calc(100vh - 20px);
+    padding: 0 6vw; 
+}
+
+.points-heading {
+    font-size: 15px;
+}
+
+.recommendation {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 50px;
+}
+
+.points-amount {
+    font-size: 30px;
+    color: rgb(255, 215, 0);
+}
+
+.bord {
+    width: 100%;
+    padding: 30px 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2.4vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    color: white;
+    margin-bottom: 100px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 35px;
+    line-height: 2;
+}
+
+.board-text {
+    color: rgb(255, 215, 0); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.board-text2 {
+    font-size: 24px;
+    color: rgb(255, 215, 0); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.bordImg {
+    width: 130px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-texts {
+    margin: 20px auto;
+}
+
+.item {
+    text-align: center;
+}
+
+.item-text {
+    font-size: 10px;
+}
+
+.striking-text1 {
+    font-size: 30px;
+}
+
+.striking-text2 {
+    font-size: 14px;
+}
+
+@media(max-width: 767px) {
+    .index-main {
+        margin: 85px -10px 0;
+    }
+
+    .board-text {
+        font-size: 20px;
+    }
+    
+    .board-text2 {
+        font-size: 15px;
+    }
+
+    .bord {
+        padding: 25px ;
+        margin-bottom: 10px;
+    }
+
+    .slideShow {
+        width: 200px;
+        
+    }
+}
+
+/* インデックス内のスライドショー */
+.slideShow {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 50px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 300px;
+    height: 400px;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 300px;
+    height: 400px;
+    z-index: 1;
+}
+/* スライドショー終わり */
+
+/* 商品検索画面の設定です */
+.search-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px);
+    color: white;
+    min-height: calc(100vh - 250px);
+    margin: 50px 80px;
+    text-align: center;
+    color: rgb(255, 215, 0);
+}
+
+.radio-container {
+    text-align: center;
+}
+
+.radio-button {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button span {
+    font-size: 17px;
+    color: #fff;
+}
+
+.radio-button span:hover {
+    color: rgb(255, 215, 0);
+}
+
+.radio-button input[type="radio"]:checked + span {
+    color: rgb(255, 215, 0);
+    border-bottom: 3px solid rgb(255, 215, 0);
+}
+
+@media (max-width: 767px) {
+    .search-main {
+        padding: 6vw;
+        margin: 30px 80px;
+    }
+}
+
+/* 商品検索結果の設定 */
+.search-results-main {
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px);
+    color: white;
+    margin: 70px 200px;
+    padding-top: 30px;
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.image-list li {
+    flex: 1 0 30%;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.image-list img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item-name {
+    font-size: 17px;
+    font-weight: 100;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 768px) {
+    .image-list li {
+        flex: 1 0 90%;
+    }
+
+    .search-results-main {
+        margin: 15px;
+    }
+}
+
+/* アイテムページの設定です */
+.item-main {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    color: white;
+}
+
+.itemData {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.subImg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100%;
+    margin: 10px;
+}
+
+.subimage {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.mainImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mainImg img {
+    max-width: 100%; 
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+.info {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info .content {
+    padding: 10px 0;
+}
+
+#star-rating {
+    padding: 10px 0;
+    font-size: 20px;
+    color: rgb(255, 215, 0);
+    letter-spacing: 4px;
+}
+
+.size {
+    margin-top: 20px;
+}
+
+.connectionItems {
+    flex: 3;
+    font-size: 10px;
+    margin-left: 30px;
+}
+
+.category-name {
+    font-size: 15px;
+    color: #929292;
+}
+
+.product-name {
+    font-size: 20px;
+}
+
+/* サイズ表示 */
+.size-option {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.size-option input[type="radio"] {
+    display: none;
+}
+
+.size-option span {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.size-option input[type="radio"]:checked + span {
+    background-color: #B88E2F;
+    color: #fff;
+}
+
+/* 数量 ― ＋ ボタン */
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    background-color: #fff; 
+    border-radius: 25px; 
+    padding: 5px; 
+    margin: 40px 0;
+}
+
+.quantity-btn {
+    border: none; 
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; 
+    cursor: pointer;
+    user-select: none; 
+    margin: 0 5px; 
+    color: #ababab;
+    background-color: #fff; 
+}
+
+.quantity-btn:hover {
+    color: #000;
+}
+
+.number-input {
+    width: 50px; 
+    text-align: center; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 17px;
+    margin: 0 5px; 
+    background-color: #FFF;
+}
+
+.buy {
+    width: 60%;
+}
+
+@media (max-width: 767px) {
+    .itemData {
+        flex-direction: column;
+    }
+
+    .mainImg, .info {
+        width: 100%; 
+    }
+
+    .mainImg img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .info {
+        padding: 10px; 
+        box-sizing: border-box; 
+        
+    }
+
+    .buy {
+        width: 100%;
+    }
+
+    /* サブイメージを非表示にしています */
+    .subImg {
+        display: none;
+    }
+}
+
+/* アイテムページ下レビュー表示の設定です */
+.review-details {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px); 
+    max-width: 100%;
+    margin: 30px 40px 5px;
+    padding: 20px;
+}
+
+.item-rating {
+    margin-bottom: 15px;
+}
+
+.stars span {
+    color: #ccc; 
+}
+
+.stars .filled {
+    color: rgb(255, 215, 0); 
+}
+
+.review-text {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.review-text2 {
+    display: flex;
+}
+
+.review-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.item-text {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.item-reviews {
+    margin-bottom: 60px;
+}
+
+/* カートへ追加しました */
+.into-cart-main {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; 
+    padding: 0;
+}
+
+.cart-page-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 73vh; /
+}
+
+.cart-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cart-image {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.cart-page-large-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cart-page-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #444;
+    color: #fff;
+    border: 2px solid rgb(255, 215, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.cart-page-link:hover {
+    background-color: rgba(184, 142, 47, 50%);
+}
+
+@media (max-width: 767px) {
+    .cart-page-main {
+        align-content: normal;
+    }
+}
+
+/* カート内の設定です */
+.cart-main {
+    padding: 0;
+}
+
+.cart-sub-main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.total {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    color: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 240px; 
+    width: 300px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    line-height: 1.5;
+    position: sticky;
+    top:180px
+}
+
+.payment {
+    text-align: left;
+}
+
+.cartItem img {
+    border-radius: 5px;
+    max-width: 30%;
+    height: auto;
+}
+
+.cartItem {
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.cartItem img {
+    max-height: 25vh;
+    width: auto;
+    object-fit: contain;
+}
+
+.cartInfo {
+    display: grid;
+    margin: 5px 5px;
+    left: 0px;
+    line-height: 2;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.cart-color {
+    height: 2.6vw;
+    width: 2.6vw;
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-btn2 {
+    background-color: #fff;
+    color: #444;
+    border: none;
+    padding: 0 11px;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn2:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+    color: #fff;
+}
+
+.nummy {
+    text-align: center;
+    width: 50px;
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+.nummy::-webkit-outer-spin-button,
+.nummy::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.nummy[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.nummy:focus {
+    outline: none;
+    border: 2px solid #444;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete-icon {
+    background-color: transparent;
+    display: block;
+    transition: 0.3s;
+}
+
+.delete-icon:hover {
+    content: url("../img/delete-hover.svg");
+}
+
+.total-amount {
+    display: flex;
+    align-items: center;
+}
+
+#itemNum {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow:3px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+.final-amount {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+    text-shadow:3px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+.order-confirmed {
+    background-color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.order-confirmed:hover {
+    background-color: rgb(255, 215, 0); 
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .cart-sub-main {
+        display: block;
+        width: 100%;
+    }
+
+    .item-section {
+        width: auto;
+    }
+
+    .cartInfo {
+        justify-content: center;
+        font-size: 18px;
+        line-height: 1.5em;
+        padding-left: 0;
+    }
+
+    .specific-page {
+        text-align: right;
+    }
+
+    .cartItem img {
+        max-height: none;
+        max-width: 100%; 
+        height: auto;
+    }
+
+    .total {
+        margin: 20px;
+
+    }
+}
+
+
+/* 購入履歴ページの設定です */
+.history {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 90px;
+}
+
+.purchaseHistory-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.purchaseHistory-main a {
+    color: #fff;
+}
+
+.item-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px); 
+    color: white;
+    width: 75%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.item-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.specific-page {
+    width: 100px;
+}
+
+.cart-item-name {
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+.cart-review a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgba(184, 142, 47, 50%);
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.cart-review a:hover {
+    background-color: rgb(255, 215, 0);
+}
+
+@media (max-width: 767px) {
+    .history {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cartItem {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cartItem img {
+        width: 100%; 
+        max-width: 300px; 
+        height: auto; 
+        margin: 0 auto; 
+        display: block; 
+    }
+
+    .cart-info {
+        justify-items: start;
+    }
+
+    .cart-review {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .cart-review a {
+        background-color: rgba(255, 215, 0, 0.8);
+        color: black !important;
+    }
+
+    .history {
+        margin: auto;
+    }
+
+    .specific-page {
+        width: auto;
+    }
+}
+
+/* レビューの設定です */
+.review-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    color: white;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating input:checked ~ label {
+    color: rgb(255, 215, 0);
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: rgb(255, 215, 0);
+}
+
+.textarea {
+    color: #000;
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #444;
+    color: #fff;
+    border: 2px solid rgb(255, 215, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(184, 142, 47, 50%);
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #B88E2F;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .mypabe-main {
+        margin-top: 0;
+    }
+}
+
+/* サンクスページの設定です */
+.theBtnHover button:hover {
+    background-color: rgb(255, 215, 0);
+}
+
+.theBtnHover button {
+    width: 100px;
+    height: 050px;
+    border-radius: 20px;
+    margin-left: 50px;
+    background-color: rgba(199, 157, 62, 1);
+}
+
+.theBtnHover a {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ランキングページの設定です */
+.searchResultItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.searchResultItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    margin: 20px 0 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .searchResultItem {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .searchResultItems {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* マイページの設定です */
+.mypabe-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px);
+    color: white;
+    min-height: calc(100vh - 300px);
+    margin: 70px 80px;
+    padding: 20px 15px;
+}
+
+.mypages {
+    display: flex;
+}
+
+.mypages footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.account-form {
+    margin-bottom: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-control {
+    color: #000;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    margin-top: 5px;
+    text-align: center;
+}
+
+@media(max-width: 768px)  {
+    .mypages {
+        margin: 40px 10px 0;
+    }
+}
+
+/* ポイント追加ページの設定です */
+.pointup-main {
+    margin: 30px;
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px;
+    max-width: 80%; 
+    width: 600px;
+    backdrop-filter: blur(10px); 
+    color: white;
+    text-align: center;
+}
+
+.footer-fixed {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+.footer-fixed footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.point-text {
+    color: rgba(255, 215, 0, 0.8);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.point-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 50px 30px;
+}
+
+.point-label {
+    color: rgba(255, 215, 0, 0.8);
+    font-size: 20px;
+    margin: 30px;
+}
+
+@media (max-width: 768px) {
+    .pointup-main {
+        max-width: 90%; 
+        width: auto; 
+        padding: 20px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pointup-main {
+        max-width: 95%; 
+        width: auto;
+        padding: 15px;
+        border-radius: 20px;
+    }
+}
+
+
+
+
+
+.bord2 {
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    justify-content: center;
+    background-color: rgba(184, 142, 47, 50%);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+.stylish-box {
+    background-color: rgba(255, 255, 255, 0.1); /* 背景色を半透明の白に */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), /* メインの影 */
+                0 7px 30px rgba(0, 0, 0, 0.3); /* 広がる影 */
+    border-radius: 20px; /* 角丸を小さく */
+    backdrop-filter: blur(10px); /* 背景をぼかす */
+    color: white;
+}
+
+.stylish-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 7px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    color: white;
+}
+
+.stylish-text {
+    color: rgb(255, 215, 0); /* 見出しを黄色に */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 軽い影をつける */
+}
+
+.stylish-text {
+    color: rgb(255, 215, 0); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
